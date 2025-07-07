@@ -16,8 +16,11 @@ header h2{
     padding: 0px 6px;
     margin:0px 2px;
     margin-top: 5px;
-    border: 1px solid rgb(48, 48, 48);
+    border: 1px solid black;
+    border-color: orange;
+    background: linear-gradient(orange, rgb(205, 220, 40));
     border-radius: 38px;
+    font-size: 23px;
 }
 header h2:hover{
     color: rgb(86, 96, 107);
@@ -55,7 +58,6 @@ footer{
 .container-second-form{
     width: 30%;
     background: linear-gradient(rgb(231, 231, 226), rgb(179, 179, 170));
-    height: 100vh;
 }
 .main-form{
     display: flex;
@@ -72,6 +74,18 @@ footer{
     padding: 25px 26px;
     overflow: auto;
 }
+.container-max-cards::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container-max-cards::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 4px;
+}
+
+.container-max-cards::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
 .container-cards{
     display: flex;
     flex-wrap: wrap;
@@ -87,9 +101,11 @@ footer{
     flex-shrink: 0;
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
+    animation: fadeZoomIn 2s ease-out forwards;
 }
 .card-form:hover{
     box-shadow: 0px 8px 16px 0px rgb(43, 43, 43);
+    background-color: rgba(245, 245, 245, 0.59);
 }
 .card-form img{
     width: 100%;
@@ -107,19 +123,6 @@ footer{
     font-size: 24px;
 }
 
-.container-max-cards::-webkit-scrollbar {
-  width: 8px;
-}
-
-.container-max-cards::-webkit-scrollbar-thumb {
-  background-color: rgb(59, 57, 57);
-  border-radius: 4px;
-}
-.container-max-cards {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(59, 57, 57) lightgray;
-}
-
 .text-intro p{
     padding: 20px 25px;
     font-size: 22px;
@@ -130,28 +133,9 @@ footer{
     font-family: sans-serif, arial, helvetica;
 }
 html {
-  scroll-behavior: smooth; /* rolagem suave em todo o site */
-}
-.container-second-form{
-    overflow: auto;
-    direction: rtl;
-    scrollbar-gutter: ltr;
-}
-.container-second-form * {
-  direction: ltr;
-}
-.container-second-form::-webkit-scrollbar {
-  width: 8px;
+  scroll-behavior: smooth;
 }
 
-.container-second-form::-webkit-scrollbar-thumb {
-  background-color: rgb(59, 57, 57);
-  border-radius: 4px;
-}
-.container-second-form {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(59, 57, 57) lightgray;
-}
 .final-second{
     display: flex;
     margin: 20px;
@@ -159,15 +143,130 @@ html {
     text-align: center;
 }
 .profiles a{
-    text-decoration: none;
-    color: rgb(12, 128, 12);
+    color: rgb(45, 124, 45);
     font-size: 20px;
 }
+.container-cards a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/*add.book===================================*/
+body{
+    background: linear-gradient(rgb(207, 207, 233), rgb(107, 112, 138));
+}
+.form-page-container{
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px 0px black;
+}
+.form-page-container h2{
+    text-align: center;
+    font-weight: 400px;
+    margin-bottom: 5px;
+    font-size: 36px;
+}
+.form-container{
+    margin: 0 auto;
+    margin-bottom: 32px;
+    max-width: 80%;
+    padding: 33px 61px;
+    font-size: 20px;
+    border-radius: 12px;
+}
+.form-group{
+    display: flex;
+    gap: 25px;
+    row-gap: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    flex-direction: column;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding: 2px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.submit-button{
+    width: 100%;
+    height: 45px;
+    border-radius: 12px;
+    background: linear-gradient(to right, orange, rgb(205, 220, 40));
+    cursor: pointer;
+    border: none;
+}
+/*details-notesfromunderground=========*/
+.container-review-card {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    background: linear-gradient(#fefefe, #e6e6e6);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 900px;
+    font-family: sans-serif;
+}
+
+.column-left-review {
+    flex: 1;
+    text-align: center;
+}
+
+.column-left-review h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.column-left-review img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.column-right-review {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column-right-review h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.column-right-review p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
 
 /*responsive mobile===================================================*/
-@media (max-width: 540px){
+@media (max-width: 768px){
     header h2{
-        font-size: 16px;
+        font-size: 14px;
         padding: 1% 2%;
     }
     .main-form{
@@ -187,4 +286,34 @@ html {
     height: auto;
     overflow: auto;
   }
+  /*add-book====================*/
+  .form-page-container{
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 10%;
+    font-family: sans-serif, arial, helvetica;
+  }
+  .form-page-container h2{
+    font-size: 25px;
+  }
+  .form-container{
+    padding: 4px 5px; 
+  }
+  .form-group{
+    max-width: 100%;
+    font-size: 20px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea{
+    width: 100%;
+    font-size: 13px;
+    padding: 6px;
+  }
+  /*details-notesunderground*/
+  .container-review-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }

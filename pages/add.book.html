@@ -1,13 +1,57 @@
-<div class="rating">
-<span>★</span>
-<span>★</span>
-<span>★</span>
-<span class="star-empty">★</span>
-</div>
-
-I’m a student who enjoys meaningful reading.
-This site was built with HTML and CSS — it’s my third project, but the first one I developed completely on my own.
-Here, I share some of my favorite books — some I’ve already read, and others I hope to read someday.
-It’s a static site for now, but in theory, you can add a book to the list.
-Click on a title to read my personal review.
-Welcome!
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>add your book</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="elements-header">
+                    <a href="../index.html">
+                    <h2>My Books Review-Back</h2>
+                </a>
+            <a href="../pages/add.book.html">
+                <h2>Add Book</h2>
+            </a>
+            </div>
+        </header>
+        <main>
+            <div class="form-page-container">
+            <h2>New Review</h2>
+            <div class="form-container">
+                <form>
+                <div class="form-group">
+                    <label for="book-name">Movie Name</label>
+                    <input type="text" id="movie-name" placeholder="Enter the book title">
+                </div>
+                <div class="form-group">
+                    <label for="poster-url">Poster URL</label>
+                    <input type="text" id="poster-url" placeholder="Paste image URL (jpg or png)">
+                </div>
+                    <div class="form-group">
+                        <label for="rating-select">Stars</label>
+                        <select id="rating-select">
+                        <option value="">Choose a rating</option>
+                        <option value="1">★☆☆☆☆ - 1 Star</option>
+                        <option value="2">★★☆☆☆ - 2 Stars</option>
+                        <option value="3">★★★☆☆ - 3 Stars</option>
+                        <option value="4">★★★★☆ - 4 Stars</option>
+                        <option value="5">★★★★★ - 5 Stars</option>
+                    </select>
+                </div>
+        <div class="form-group">
+            <label for="review-text">My Review</label>
+            <textarea id="review-text" rows="5" placeholder="Write your thoughts here..."></textarea>
+        </div>
+        <button type="submit" class="submit-button">Add Book</button>
+                </form>
+            </div>
+        </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Mlib &ndash; My Books Library</p>
+        </footer>
+    </body>
+</html>
