@@ -30,7 +30,7 @@ header{
     width: 100%;
     background: linear-gradient(to right, beige, rgb(220, 210, 119));
     height: 50px;
-    font-family: Cursive, Arial, Helvetica;
+    font-family: sans-serif, monospace, Arial, Helvetica;
 }
 header a{
     text-decoration: none;
